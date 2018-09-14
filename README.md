@@ -1,4 +1,4 @@
 # universal-ctags
 
-TODO: Enter the cookbook description here.
+This is cookbook for universal-ctags.
 
