@@ -17,6 +17,7 @@ describe 'universal-ctags::default' do
 
     before do
       stub_command('/opt/universal-ctags/bin/ctags --version | grep e522743d873abcfa4997fe6bad5f5cf634f57c6d').and_return(false)
+      stub_command("test -f #{Chef::Config['file_cache_path']}/e522743d873abcfa4997fe6bad5f5cf634f57c6d.tar.gz").and_return(false)
     end
 
     it 'converges successfully' do
