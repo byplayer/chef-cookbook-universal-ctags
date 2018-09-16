@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
-pkgs = %w{autotools-dev autoconf pkg-config python-docutils}
+pkgs = %w(autotools-dev autoconf pkg-config python-docutils)
 pkgs.each do |pkg|
   package pkg
 end
@@ -17,7 +17,7 @@ remote_file "#{Chef::Config['file_cache_path']}/#{basename}" do
   not_if "test -f #{Chef::Config['file_cache_path']}/#{basename}"
 end
 
-execute 'build universal-ctags: #{basename}' do
+execute "build universal-ctags: #{basename}" do
   cwd Chef::Config['file_cache_path']
   command <<-COMMAND
     if [ -d #{node['universal-ctags']['prefix']} ]; then

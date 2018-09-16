@@ -5,7 +5,7 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-BASE_DIR='/opt/universal-ctags'
+BASE_DIR = '/opt/universal-ctags'.freeze
 
 describe file(BASE_DIR) do
   it { should be_directory }
@@ -17,12 +17,12 @@ end
 
 describe file("#{BASE_DIR}/bin/ctags") do
   it { should be_file }
-  it { should be_allowed("execute") }
+  it { should be_allowed('execute') }
 end
 
 describe file("#{BASE_DIR}/bin/readtags") do
   it { should be_file }
-  it { should be_allowed("execute") }
+  it { should be_allowed('execute') }
 end
 
 describe file("#{BASE_DIR}/share/man/man1") do
