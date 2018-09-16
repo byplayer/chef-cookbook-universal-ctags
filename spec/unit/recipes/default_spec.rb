@@ -7,7 +7,7 @@
 require 'spec_helper'
 
 describe 'universal-ctags::default' do
-  context 'When all attributes are default, on Ubuntu 16.04' do
+  context 'When all attributes are default, on Ubuntu 18.04' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
       # https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
@@ -15,17 +15,8 @@ describe 'universal-ctags::default' do
       runner.converge(described_recipe)
     end
 
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
-    end
-  end
-
-  context 'When all attributes are default, on CentOS 7.4.1708' do
-    let(:chef_run) do
-      # for a complete list of available platforms and versions see:
-      # https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
-      runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '7.4.1708')
-      runner.converge(described_recipe)
+    before do
+      stub_command('/opt/universal-ctags/bin/ctags --version | grep e522743d873abcfa4997fe6bad5f5cf634f57c6d').and_return(false)
     end
 
     it 'converges successfully' do
