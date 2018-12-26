@@ -19,7 +19,7 @@ remote_file "#{Chef::Config['file_cache_path']}/#{basename}" do
   not_if    "test -f #{Chef::Config['file_cache_path']}/#{basename}"
 end
 
-dir_name = "ctags-#{default['universal-ctags']['version']}"
+dir_name = "ctags-#{node['universal-ctags']['version']}"
 
 execute "build universal-ctags: #{basename}" do
   cwd Chef::Config['file_cache_path']
