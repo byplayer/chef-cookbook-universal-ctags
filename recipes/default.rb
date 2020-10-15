@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
-pkgs = %w(autotools-dev autoconf pkg-config python-docutils)
+pkgs = %w[autotools-dev autoconf pkg-config python-docutils]
 pkgs.each do |pkg|
   package pkg
 end
@@ -14,7 +14,7 @@ basename = File.basename(url)
 
 remote_file "#{Chef::Config['file_cache_path']}/#{basename}" do
   source    url
-  mode      00644
+  mode      0o0644
   checksum  node['universal-ctags']['checksum']
   not_if    "test -f #{Chef::Config['file_cache_path']}/#{basename}"
 end
@@ -35,7 +35,7 @@ execute "build universal-ctags: #{basename}" do
     tar xzf #{basename}
     cd #{dir_name}
     ./autogen.sh
-    sed -i -e "s/PACKAGE_VERSION='0.0.0'/PACKAGE_VERSION='#{node['universal-ctags']['version']}'/g" configure
+    sed -r -i -e "s/PACKAGE_VERSION='([0-9\.]+)'/PACKAGE_VERSION='\1 #{node['universal-ctags']['version']}'/g" configure
     ./configure --prefix=#{node['universal-ctags']['prefix']} #{node['universal-ctags']['congigure_opt']}
     make
     make install
