@@ -1,5 +1,3 @@
-# # encoding: utf-8
-
 # Inspec test for recipe universal-ctags::default
 
 # The Inspec reference, with examples and extensive documentation, can be
@@ -46,6 +44,11 @@ describe file("#{BASE_DIR}/share/man/man7//ctags-optlib.7") do
 end
 
 describe bash("#{BASE_DIR}/bin/ctags --version") do
-  its('stdout') { should match /e522743d873abcfa4997fe6bad5f5cf634f57c6d/ }
+  its('stdout') { should match(/01b9fc8669928ff7e677f77ff3df3a6f84a02a16/) }
+  its('exit_status') { should eq 0 }
+end
+
+describe bash("#{BASE_DIR}/bin/ctags --version") do
+  its('stdout') { should match(/5\.9\.0/) }
   its('exit_status') { should eq 0 }
 end
