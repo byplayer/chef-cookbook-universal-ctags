@@ -16,10 +16,11 @@ $ bundle install
 
 Run the test step by step using the below coommands.
 
-````bash
+```bash
 $ bundle exec kitchen create
 $ bundle exec kitchen converge
-
+$ bundle exec kitchen verify
+```
 
 ## destroy instance
 
@@ -27,4 +28,12 @@ Destroy docker instance which is used for the test.
 
 ```bash
 $ bundle exec kitchen destroy
-````
+```
+
+## run full test and destroy container after test
+
+Run test and destroy container. It takes time than step by step process because create instance and test and destroy. If you would like to modify source code or test and run so it is better to use `create`, `converge` and `verify` one by one.
+
+```bash
+$ bundle exec kitchen test
+```
