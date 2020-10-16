@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
-pkgs = %w[autotools-dev autoconf pkg-config python-docutils]
+pkgs = %w[autotools-dev autoconf make gcc pkg-config python-docutils]
 pkgs.each do |pkg|
   package pkg
 end
