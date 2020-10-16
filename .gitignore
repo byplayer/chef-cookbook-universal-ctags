@@ -7,10 +7,10 @@
 *.un~
 
 # Bundler
-Gemfile.lock
 gems.locked
 bin/*
 .bundle/*
+vendor/ruby
 
 # test kitchen
 .kitchen/
