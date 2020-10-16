@@ -85,6 +85,9 @@ tmp
 
 # Bundler #
 ###########
+Gemfile
+Gemfile.lock
+.ruby-version
 vendor/*
 
 # Policyfile #
@@ -97,6 +100,7 @@ Policyfile.lock.json
 CONTRIBUTING*
 CHANGELOG*
 TESTING*
+.kitchen.yml
 
 # Vagrant #
 ###########
