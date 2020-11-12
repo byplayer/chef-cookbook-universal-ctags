@@ -4,7 +4,7 @@ orbs:
   ruby: circleci/ruby@1.1.2
 
 jobs:
-  test:
+  build:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
