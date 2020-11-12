@@ -8,8 +8,7 @@ provisioner:
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
-  client_rb:
-    chef_license: accept
+  chef_license: accept-no-persist
 
 verifier:
   name: inspec
