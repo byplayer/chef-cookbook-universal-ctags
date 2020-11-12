@@ -1,11 +1,16 @@
 version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1.2
+
 jobs:
   build:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
-      - checkout
-      - run: echo "Hello world!"
-      - run: docker version
-      # todo install ruby
-      # run kitchen test
+      steps:
+        - ruby/install:
+            version: "2.7.2"
+        - checkout
+        - run: bundle install
+        - run: bundle exec kitchen test
