@@ -8,7 +8,7 @@ jobs:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
-      - ruby/install-deps
+      - run: apt-get install curl
       - ruby/install:
           version: "2.7.2"
       - checkout
