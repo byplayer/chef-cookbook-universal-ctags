@@ -6,5 +6,6 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello world!"
+      - run: docker version
       # todo install ruby
       # run kitchen test
