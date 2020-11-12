@@ -2,7 +2,7 @@ language: ruby
 services:
   - docker
 rvm:
-  - 2.7.s
+  - 2.7.2
 
 script:
   - bundle install
