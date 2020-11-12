@@ -4,14 +4,12 @@ orbs:
   ruby: circleci/ruby@1.1.2
 
 jobs:
-  build:
+  test:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
       - ruby/install:
           version: "2.7.2"
       - checkout
-  test:
-    steps:
       - run: bundle install
       - run: bundle exec kitchen test
