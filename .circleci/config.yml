@@ -8,9 +8,10 @@ jobs:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
-      steps:
-        - ruby/install:
-            version: "2.7.2"
-        # - checkout
-        # - run: bundle install
-        # - run: bundle exec kitchen test
+      - ruby/install:
+          version: "2.7.2"
+      - checkout
+  test:
+    steps:
+      - run: bundle install
+      - run: bundle exec kitchen test
