@@ -2,6 +2,11 @@
 
 This is cookbook for universal-ctags.
 
+# CI status
+
+- CircleCI status ![CircleCI status badge](https://circleci.com/gh/byplayer/chef-cookbook-universal-ctags.svg?style=svg)
+- TravisCI status ![TravisCI status badge](https://api.travis-ci.org/byplayer/chef-cookbook-universal-ctags.svg)
+
 # how to test it with kitchen
 
 ## preparation
