@@ -1,0 +1,9 @@
+language: ruby
+services:
+  - docker
+rvm:
+  - 2.7.s
+
+script:
+  - bundle install
+  - bundle exec kitchen test
