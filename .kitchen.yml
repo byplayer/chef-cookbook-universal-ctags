@@ -18,6 +18,7 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[apt]
       - recipe[universal-ctags::default]
     verifier:
       inspec_tests:
