@@ -8,6 +8,7 @@ jobs:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
+      - curl -sSL https://get.rvm.io | as_user bash -s
       - ruby/install:
           version: "2.7.2"
       - checkout
