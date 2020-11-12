@@ -8,10 +8,8 @@ jobs:
     machine:
       image: "ubuntu-2004:202010-01"
     steps:
-      - run: sudo apt-get update
-      - run: sudo apt-get install curl
-      - ruby/install:
-          version: "2.7.2"
+      - run: source /opt/circleci/.rvm/scripts/rvm
+      - run: rvm install 2.7.2
       - checkout
       - run: bundle install
       - run: bundle exec kitchen test
