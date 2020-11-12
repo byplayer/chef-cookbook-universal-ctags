@@ -11,6 +11,6 @@ jobs:
       steps:
         - ruby/install:
             version: "2.7.2"
-        - checkout
-        - run: bundle install
-        - run: bundle exec kitchen test
+        # - checkout
+        # - run: bundle install
+        # - run: bundle exec kitchen test
