@@ -1,0 +1,15 @@
+{
+  "name": "params",
+  "override_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "parameter test role",
+  "chef_type": "role",
+  "run_list": ["recipe[universal-ctags]"],
+  "default_attributes": {
+    "universal-ctags": {
+      "prefix": "/opt/params_test/universal-ctags",
+      "version": "4729393a8d9c5c813de53fda90f10e1cbb27cd4d",
+      "checksum": "e32331cf4d8e8aad340fe489ab20e6bbab613aea21646ab39a46745b456b9438"
+    }
+  }
+}
