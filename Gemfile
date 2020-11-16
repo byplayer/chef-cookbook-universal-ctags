@@ -4,5 +4,5 @@ source 'https://rubygems.org'
 
 gem 'berkshelf'
 gem 'kitchen'
-gem 'kitchen-docker'
+gem 'kitchen-dokken'
 gem 'kitchen-inspec'
