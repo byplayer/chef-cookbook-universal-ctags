@@ -35,11 +35,11 @@ describe file("#{BASE_DIR}/share/man/man7") do
   it { should be_directory }
 end
 
-describe file("#{BASE_DIR}/share/man/man7//ctags-incompatibilities.7") do
+describe file("#{BASE_DIR}/share/man/man7/ctags-incompatibilities.7") do
   it { should be_file }
 end
 
-describe file("#{BASE_DIR}/share/man/man7//ctags-optlib.7") do
+describe file("#{BASE_DIR}/share/man/man7/ctags-optlib.7") do
   it { should be_file }
 end
 
