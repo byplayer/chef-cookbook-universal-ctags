@@ -3,7 +3,15 @@
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
-pkgs = %w[autotools-dev autoconf make gcc pkg-config python-docutils]
+
+pkgs = []
+
+if platform_family?('debian', 'ubuntu')
+  pkgs = %w[autotools-dev autoconf make gcc pkg-config python-docutils]
+elsif platform_family?('mac_os_x')
+  pkgs = %w[autoconf gcc]
+end
+
 pkgs.each do |pkg|
   package pkg
 end

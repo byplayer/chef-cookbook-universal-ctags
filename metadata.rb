@@ -7,7 +7,9 @@ long_description 'Installs/Configures universal-ctags'
 version '1.0.1'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 
-supports 'ubuntu'
+%w[mac_os_x ubuntu].each do |os|
+  supports os
+end
 
 issues_url 'https://github.com/byplayer/chef-cookbook-universal-ctags/issues'
 source_url 'https://github.com/byplayer/chef-cookbook-universal-ctags'
