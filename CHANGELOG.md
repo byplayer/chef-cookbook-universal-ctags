@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the universal-ctags cookbook.
 
+# 2.0.0
+
+- Support mac_os_x environment
+
 # 0.2.5
 
 - fix build issue
@@ -17,5 +21,3 @@ This file is used to list changes made in each version of the universal-ctags co
 # 0.1.0
 
 - Initial release.
-
-
