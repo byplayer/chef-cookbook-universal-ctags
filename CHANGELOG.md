@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the universal-ctags cookbook.
 
+# 2.1.0
+
+- support ubntu 21.04
+
 # 2.0.0
 
 - Support mac_os_x environment
