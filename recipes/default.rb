@@ -7,7 +7,7 @@
 pkgs = []
 
 if platform_family?('debian', 'ubuntu')
-  pkgs = %w[autotools-dev autoconf make gcc pkg-config python-docutils]
+  pkgs = %w[autotools-dev autoconf make gcc pkg-config python3-docutils]
 elsif platform_family?('mac_os_x')
   pkgs = %w[autoconf gcc]
 end
