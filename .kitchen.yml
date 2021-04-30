@@ -29,6 +29,7 @@ suites:
   - name: default
     run_list:
       - recipe[apt]
+      - recipe[apt_update]
       - recipe[universal-ctags::default]
     verifier:
       inspec_tests:
