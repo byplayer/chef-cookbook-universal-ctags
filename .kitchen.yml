@@ -20,10 +20,10 @@ verifier:
 platforms:
   - name: ubuntu-20.04
     driver:
-      image: index.docker.io/dokken/ubuntu-20.04
+      image: dokken/ubuntu-20.04
   - name: ubuntu-21.04
     driver:
-      image: index.docker.io/dokken/ubuntu-21.04
+      image: dokken/ubuntu-21.04
 
 suites:
   - name: default

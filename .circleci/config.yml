@@ -7,6 +7,8 @@ jobs:
     steps:
       - run: source /opt/circleci/.rvm/scripts/rvm
       - run: rvm install 2.7.2
+      - run: docker pull dokken/ubuntu-21.04
+      - run: docker image list
       - checkout
       - run: bundle install
       - run: bundle exec kitchen test
