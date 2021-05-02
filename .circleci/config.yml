@@ -6,9 +6,9 @@ jobs:
       image: "ubuntu-2004:202010-01"
     steps:
       - run: source /opt/circleci/.rvm/scripts/rvm
+      # To fix libpaper install error
+      - run: apt install locales-all
       - run: rvm install 2.7.2
-      - run: docker pull dokken/ubuntu-21.04
-      - run: docker image list --digests
       - checkout
       - run: bundle install
       - run: bundle exec kitchen test
