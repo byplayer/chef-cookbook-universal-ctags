@@ -46,6 +46,7 @@ bash "build universal-ctags: #{basename}" do
     ./autogen.sh
     sed -r -i -e "s/PACKAGE_VERSION='([0-9\.]+)'/PACKAGE_VERSION='\\1 #{node['universal-ctags']['version']}'/g" configure
     ./configure --prefix=#{node['universal-ctags']['prefix']} #{node['universal-ctags']['congigure_opt']}
+    cat config.log
     make
     make install
   COMMAND
