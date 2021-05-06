@@ -31,6 +31,7 @@ dir_name = "ctags-#{node['universal-ctags']['version']}"
 
 bash "build universal-ctags: #{basename}" do
   cwd Chef::Config['file_cache_path']
+  environment({ 'CONFIG_SHELL' => '/bin/bash' })
   code <<-COMMAND
     if [ -d #{node['universal-ctags']['prefix']} ]; then
       rm -r #{node['universal-ctags']['prefix']}
