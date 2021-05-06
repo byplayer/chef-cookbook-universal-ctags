@@ -23,7 +23,7 @@ platforms:
       image: dokken/ubuntu-20.04
   - name: ubuntu-21.04
     driver:
-      image: dokken/ubuntu-21.04
+      image: byplayer/dokken-ubuntu-21.04
 
 suites:
   - name: default
