@@ -38,6 +38,7 @@ bash "build universal-ctags: #{basename}" do
     fi
 
     tar xzf #{basename}
+    chown -R root:root #{dir_name}
     cd #{dir_name}
     ./autogen.sh
 
