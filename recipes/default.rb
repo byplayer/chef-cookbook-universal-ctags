@@ -33,10 +33,6 @@ bash "build universal-ctags: #{basename}" do
   cwd Chef::Config['file_cache_path']
   environment({ 'CONFIG_SHELL' => '/bin/bash' })
   code <<-COMMAND
-    if [ -d #{node['universal-ctags']['prefix']} ]; then
-      rm -r #{node['universal-ctags']['prefix']}
-    fi
-
     if [ -d #{dir_name} ]; then
       rm -r #{dir_name}
     fi
@@ -48,6 +44,9 @@ bash "build universal-ctags: #{basename}" do
     ./configure --prefix=#{node['universal-ctags']['prefix']} #{node['universal-ctags']['congigure_opt']}
     cat config.log
     make
+    if [ -d #{node['universal-ctags']['prefix']} ]; then
+      rm -r #{node['universal-ctags']['prefix']}
+    fi
     make install
   COMMAND
   not_if "#{node['universal-ctags']['prefix']}/bin/ctags --version | grep #{node['universal-ctags']['version']}"
