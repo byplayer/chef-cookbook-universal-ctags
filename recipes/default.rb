@@ -42,6 +42,7 @@ bash "build universal-ctags: #{basename}" do
     cd #{dir_name}
     ./autogen.sh
 
+    ls -la ../
     pwd
     ls -la
 
