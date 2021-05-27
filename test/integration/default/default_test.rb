@@ -44,7 +44,7 @@ describe file("#{BASE_DIR}/share/man/man7/ctags-optlib.7") do
 end
 
 describe bash("#{BASE_DIR}/bin/ctags --version") do
-  its('stdout') { should match(/01b9fc8669928ff7e677f77ff3df3a6f84a02a16/) }
+  its('stdout') { should match(/f61ef4a046e5504743ed78183922c31d0a9003de/) }
   its('exit_status') { should eq 0 }
 end
 
