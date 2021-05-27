@@ -8,5 +8,6 @@ jobs:
       - run: source /opt/circleci/.rvm/scripts/rvm
       - run: rvm install 2.7.2
       - checkout
+      - run: pushd ../ && popd
       - run: bundle install
       - run: bundle exec kitchen test
