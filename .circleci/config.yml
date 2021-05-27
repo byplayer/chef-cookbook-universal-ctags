@@ -6,7 +6,7 @@ jobs:
       image: "ubuntu-2004:202104-01"
     steps:
       - run: source /opt/circleci/.rvm/scripts/rvm
-      - run: export PATH=/opt/circleci/.rvm/bin:$PATH && rvm install 2.7.2
+      - run: rvm install 3.0.1
       - checkout
-      - run: export PATH=/opt/circleci/.rvm/bin:$PATH && bundle install
-      - run: export PATH=/opt/circleci/.rvm/bin:$PATH && bundle exec kitchen test
+      - run: bundle install
+      - run: bundle exec kitchen test
