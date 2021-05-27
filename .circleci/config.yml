@@ -6,7 +6,7 @@ jobs:
       image: "ubuntu-2004:202104-01"
     steps:
       - run: source /opt/circleci/.rvm/scripts/rvm
-      - run: export PATH="$PATH:$HOME/.rvm/bin"
+      - run: export PATH="$PATH:/opt/circleci/.rvm/bin"
       - run: rvm install 2.7.2
       - checkout
       - run: bundle install
