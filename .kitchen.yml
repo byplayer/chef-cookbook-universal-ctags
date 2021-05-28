@@ -18,9 +18,9 @@ verifier:
   name: inspec
 
 platforms:
-  # - name: ubuntu-20.04
-  #   driver:
-  #     image: dokken/ubuntu-20.04
+  - name: ubuntu-20.04
+    driver:
+      image: dokken/ubuntu-20.04
   - name: ubuntu-21.04
     driver:
       image: byplayer/dokken-ubuntu-21.04
@@ -35,10 +35,10 @@ suites:
         - test/integration/default
     attributes:
 
-  # - name: params
-  #   run_list:
-  #     - recipe[apt]
-  #     - role[params]
-  #   verifier:
-  #     inspec_tests:
-  #       - test/integration/params
+  - name: params
+    run_list:
+      - recipe[apt]
+      - role[params]
+    verifier:
+      inspec_tests:
+        - test/integration/params
